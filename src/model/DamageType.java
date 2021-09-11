@@ -4,5 +4,5 @@ public enum DamageType {
     block,
     magical,
 //    battlemage,
-    damage
+    item
 }

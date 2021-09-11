@@ -6,7 +6,7 @@ import model.Item.Weapon;
 //import model.Item.Bow;
 
 public class BasedCharacter {
-    protected String name, imgpath;
+    protected String name, imgpath,description;
     protected DamageType type;
     //    protected Integer fullHp, basedDef, basedDef, basedRes;
     protected Integer fullHp, basedDef,basedPow, basedRes,basedSpd;
@@ -16,6 +16,7 @@ public class BasedCharacter {
 
     public String getName () { return name; }
     public String getImagepath() { return imgpath; }
+    public String getDescription() {return description;}
     public Integer getHp() { return hp; }
     public Integer getFullHp() { return fullHp; }
     public Integer getPower() { return power; }
@@ -54,6 +55,7 @@ public class BasedCharacter {
 
     @Override
     public String toString() { return name; }
+
 
 
     public DamageType getType() {

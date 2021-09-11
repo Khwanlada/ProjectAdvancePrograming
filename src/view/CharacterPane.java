@@ -19,33 +19,22 @@ public class CharacterPane extends ScrollPane {
     }
 
     private Pane getDetailsPane() {
-        Pane characterInfoPane = new VBox(10);
+        Pane characterInfoPane = new VBox(50);
         characterInfoPane.setBorder(null);
-        characterInfoPane.setPadding(new Insets(25, 25, 25, 25));
-        Label name,type,hp,atk,def,res,Spd;
+        characterInfoPane.setPadding(new Insets(50, 50, 50, 50));
+        Label name,type,description;
         ImageView mainImage = new ImageView();
         if (this.character != null) {
             name = new Label("Name: "+character.getName());
             mainImage.setImage(new Image(getClass().getClassLoader().getResource(
                     character.getImagepath()).toString()));
-            hp = new Label("HP: "+character.getHp().toString()+"/"+character.
-                    getFullHp().toString());
             type = new Label("Type: "+character.getType().toString());
-            atk = new Label("ATK: "+character.getPower());
-            def = new Label("DEF: "+character.getDefense());
-            res = new Label("RES: "+character.getResistance());
-            //+++++
-            Spd = new Label("SPD: " + character.getSpd());
+            description = new Label("Description: " + character.getDescription());
         } else {
             name = new Label("Name: ");
             mainImage.setImage(new Image(getClass().getClassLoader().getResource("assets/unknown.png").toString()));
-            hp = new Label("HP: ");
             type = new Label("Type: ");
-            atk = new Label("ATK: ");
-            def = new Label("DEF: ");
-            res = new Label("RES: ");
-            //+++
-            Spd = new Label("SPD: ");
+            description = new Label("Description");
         }
         Button genCharacter = new Button();
         genCharacter.setText("Generate Block");
@@ -57,7 +46,7 @@ public class CharacterPane extends ScrollPane {
 
         //-- 1.29 -------
         genCharacter.setOnAction(new AllCustomHandler.GenHeroHandler());
-        characterInfoPane.getChildren().addAll(name,mainImage,type,hp,atk,def,res, Spd,
+        characterInfoPane.getChildren().addAll(name,mainImage,type,description,
                 genCharacter);
         return characterInfoPane;
     }

@@ -97,7 +97,7 @@ public class AllCustomHandler {
                 character.equipWeapon((Weapon) retrievedEquipment);
             } else {
                 //damage
-                if (character.getType() == DamageType.damage) {
+                if (character.getType() == DamageType.item) {
                     Launcher.setAllEquipments((GenItemList.setUpItemList()));
                     Launcher.refreshPane();
                     return;
