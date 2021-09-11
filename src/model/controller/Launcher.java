@@ -49,7 +49,7 @@ public class Launcher extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws ExceptionInInitializerError{
         primaryStage.setTitle("Intro to RPG");
         primaryStage.setResizable(false);
         primaryStage.show();

@@ -34,7 +34,7 @@ public class CharacterPane extends ScrollPane {
             name = new Label("Name: ");
             mainImage.setImage(new Image(getClass().getClassLoader().getResource("assets/unknown.png").toString()));
             type = new Label("Type: ");
-            description = new Label("Description");
+            description = new Label("Description: "+"\n");
         }
         Button genCharacter = new Button();
         genCharacter.setText("Generate Block");

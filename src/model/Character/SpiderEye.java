@@ -3,12 +3,14 @@ package model.Character;
 
 import model.DamageType;
 
-public class MagicalCharacter extends BasedCharacter {
+public class SpiderEye extends BasedCharacter {
 
-    public MagicalCharacter(String name, String imgpath, int basedDef, int basedRes,int basedSpd) {
+    public SpiderEye(String name, String imgpath,String description) {
         this.name = name;
-        this.type = DamageType.magical;
+        //this.type = DamageType.magical;
+        this.type = DamageType.item;
         this.imgpath = imgpath;
+        this.description = description;
         this.fullHp = 30;
         this.basedPow = 50;
         this.basedDef = basedDef;
