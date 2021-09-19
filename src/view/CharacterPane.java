@@ -22,7 +22,7 @@ public class CharacterPane extends ScrollPane {
         Pane characterInfoPane = new VBox(50);
         characterInfoPane.setBorder(null);
         characterInfoPane.setPadding(new Insets(50, 50, 50, 50));
-        Label name,type,description;
+        Label name,type,description,likePoint;
         ImageView mainImage = new ImageView();
         if (this.character != null) {
             name = new Label("Name: "+character.getName());
@@ -30,11 +30,13 @@ public class CharacterPane extends ScrollPane {
                     character.getImagepath()).toString()));
             type = new Label("Type: "+character.getType().toString());
             description = new Label("Description: " + character.getDescription());
+            likePoint = new Label("Like: " +character.getLikePoint());
         } else {
             name = new Label("Name: ");
             mainImage.setImage(new Image(getClass().getClassLoader().getResource("assets/unknown.png").toString()));
             type = new Label("Type: ");
             description = new Label("Description: "+"\n");
+            likePoint = new Label("Like: " +character.getLikePoint());
         }
         Button genCharacter = new Button();
         genCharacter.setText("Generate Block");
@@ -46,7 +48,7 @@ public class CharacterPane extends ScrollPane {
 
         //-- 1.29 -------
         genCharacter.setOnAction(new AllCustomHandler.GenHeroHandler());
-        characterInfoPane.getChildren().addAll(name,mainImage,type,description,
+        characterInfoPane.getChildren().addAll(name,mainImage,type,description,likePoint,
                 genCharacter);
         return characterInfoPane;
     }

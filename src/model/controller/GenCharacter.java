@@ -17,15 +17,16 @@ public class GenCharacter {
         int basedRes = rand.nextInt(50) + 1;
         //+++
         int basedSpd = rand.nextInt(50) + 1;
+        int likePoint = 0;
         //=======
         if (type == 1) {
-            character = new SpiderEye("MagicChar1", "assets/wizard.png",  "\n"+"Spider Eyes have a chance of dropping when a Cave Spider or Spider dies." +
-                    "\n"+ " When eaten they poison the player.");
+            character = new SpiderEye("Spider eye", "assets/wizard.png",  "\n"+"Spider Eyes have a chance of dropping when a Cave Spider or Spider dies." +
+                    "\n"+ " When eaten they poison the player.", likePoint);
         }
         //++++childe++++
         else if (type == 2) {
             character = new Melon("Melon", "assets/childe.png", "\n"+"Melon Slices come from destroying a Melon (Block). " +
-                    "\n"+ "It reduces hunger by 1 when eaten." );
+                    "\n"+ "It reduces hunger by 1 when eaten.", likePoint);
             //===========
         } else {
             character = new Grass("Grass", "assets/knight.png",  "\n"+"Grass is one of the most common blocks on the surfaces of maps." +"\n"+
@@ -33,7 +34,7 @@ public class GenCharacter {
                     "\n"+"Dirt/Grass is required for plants like Saplings to grow. " +"\n"+
                     "\n"+"Grass doesn't fall when there are no blocks under it so its useful for creating building foundations." +"\n"+
                     "\n"+ "When Grass is destroyed Dirt is dropped, there is also a small chance that a Bone will be dropped. " +"\n"+
-                    "\n"+ "When Bonemeal is used on Grass a Tall Grass will be created on top of it.");
+                    "\n"+ "When Bonemeal is used on Grass a Tall Grass will be created on top of it.",likePoint);
         }
         return character;
     }

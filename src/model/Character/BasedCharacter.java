@@ -10,14 +10,15 @@ public class BasedCharacter {
     protected DamageType type;
     //    protected Integer fullHp, basedDef, basedDef, basedRes;
     protected Integer fullHp, basedDef,basedPow, basedRes,basedSpd;
-    protected Integer hp, power, defense, resistance,Spd;
+    protected Integer likePoint, power, defense, resistance,Spd;
     protected Weapon weapon;
     protected Armor armor;
 
     public String getName () { return name; }
     public String getImagepath() { return imgpath; }
     public String getDescription() {return description;}
-    public Integer getHp() { return hp; }
+    public Integer getLikePoint() {return likePoint;}
+    //public Integer getHp() { return hp; }
     public Integer getFullHp() { return fullHp; }
     public Integer getPower() { return power; }
     public Integer getDefense() { return defense; }

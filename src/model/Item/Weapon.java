@@ -19,8 +19,8 @@ public class Weapon extends BasedEquipment {
     }
     public int getPower() { return power; }
     public void setPower(int power) { this.power = power; }
-    public void setDamageType(DamageType weaponType) {
-        this.damageType = weaponType;
+    public void setDamageType(DamageType likeType) {
+        this.damageType = likeType;
     }
     public DamageType getDamageType() { return damageType; }
     //++++++
